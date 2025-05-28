@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО "Техностар"</title>
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* Отключаем горизонтальную прокрутку */
+        }
+
+        /* Анимация фона (можно заменить на изображение) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #4CAF50, #2196F3, #E91E63, #FF9800);
+            background-size: 400% 400%;
+            z-index: -1;
+            animation: animateBackground 10s ease infinite;
+        }
+
+        @keyframes animateBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Контейнер */
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Прозрачный белый фон */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .header h1:hover {
+            color: #3498db;
+        }
+
+        .header p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .header .pp {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #777;
+        }
+
+        .header .pp span {
+            color: #3498db;
+            font-weight: normal;
+        }
+
+        /* Линия */
+        .line {
+            border-bottom: 3px solid #3498db;
+            margin: 30px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .line h3 {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 0 20px;
+            font-size: 2rem;
+            color: #2c3e50;
+            font-family: 'Oswald', sans-serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Обязанности */
+        .obyazonnost {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .obyazonnost ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .obyazonnost ul li {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Полупрозрачный фон */
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            animation: slideInLeft 0.5s ease-in-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .obyazonnost ul li:hover {
+            background-color: rgba(255, 255, 255, 0.95);
+            transform: translateX(5px);
+        }
+
+        /* Мобильные устройства */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                margin: 30px auto;
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1.2rem;
+            }
+
+            .header .pp {
+                font-size: 1rem;
+            }
+
+            .line h3 {
+                font-size: 1.5rem;
+            }
+
+            .obyazonnost ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <!-- Подключаем шрифты OpenAI -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ООО "Техностар"</h1>
+            <p>г.Москва, Р.Ф.</p>
+            <p class="pp"><span>Сотрудник:</span> Мадаминов Махмуджон Кувондикович</p>
+            <p class="pp"><span>Должность:</span> Cпециалист по информационным технологиям</p>
+
+        </div>
+        <!-- end header -->
+
+        <div class="line">
+            <h3>Обязанности</h3>
+        </div>
+
+        <div class="obyazonnost">
+            <ul class="ul-1">
+                <li>Установка и настройка программного обеспечения (ПО) и операционных систем (ОС).</li>
+                <li>Поддержка Active Directory.</li>
+                <li>Настройка сетевых роутеров и оборудования.</li>
+                <li>Монтаж сетевого оборудования.</li>
+                <li>Настройка, обслуживание и устранение неполадок серверного и сетевого оборудования.</li>
+                <li>Обеспечение и поддержка ИТ-оборудованием сотрудников.</li>
+                <li>Техническая поддержка пользователей и устранение неполадок.</li>
+                <li>Работа с 1С: Зарплата и управление персоналом.</li> 
+                <li>Составление внутренних отчетов.</li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- end container -->
+</body>
+
+</html>
